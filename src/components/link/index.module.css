@@ -1,0 +1,37 @@
+.headerLink {
+ font-family: Optima, sans-serif;
+ text-decoration: none;
+ background-color: #001a33;
+ border: none;
+ border-radius: 3px;
+ color: #fff;
+ padding: 10px 20px;
+ font-size: 18px;
+ display: inline-block;
+ text-align: center;
+}
+
+
+
+.headerLink:hover {
+  background-color: #e6ac00;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.navLink {
+ font-family: Optima, sans-serif;
+ text-decoration: none;
+ background-color: white;
+ border: none;
+ border-radius: 3px;
+ color: #001a33;
+ padding: 10px 20px;
+ font-size: 18px;
+ display: inline-block;
+ text-align: center;
+}
+
+.navLink:hover {
+  background-color: #e6ac00;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

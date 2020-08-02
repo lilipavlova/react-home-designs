@@ -1,0 +1,23 @@
+/* Header style */
+.header {
+    color: #fff;
+    background-color:#001a33;
+    margin: 0;
+    height: 80px;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+link:first-child {
+  float: left;
+}
+
+.ul {
+    text-align: center;
+    font-size: 18px;
+    padding: 20px 10px;
+    display: inline-block;
+    float: right;
+}
+
+
