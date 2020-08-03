@@ -35,3 +35,21 @@
   background-color: #e6ac00;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+.headerLinkHome {
+ font-family: Optima, sans-serif;
+ font-style: italic;
+ text-decoration: none;
+ background-color: #001a33;
+ border: none;
+ border-radius: 3px;
+ color: #fff;
+ padding: 20px 20px;
+ font-size: 27px;
+ display: inline-block;
+ text-align: center;
+}
+
+.headerLinkHome:hover {
+    border-bottom: 2px solid #e6ac00;
+}

@@ -1,0 +1,30 @@
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  background-color: white;
+}
+
+.label {
+    color: #001a33;
+    font-size: 17px;
+}
+
+/* Full-width input fields */
+.input {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  font-family: Optima, sans-serif;
+  border-radius: 3px;
+  
+}
+
+.input:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+

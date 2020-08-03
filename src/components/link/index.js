@@ -3,9 +3,9 @@ import styles from './index.module.css'
 import { Link } from 'react-router-dom'
 
 
-const LinkComponent = ({href , style, title}) => {
+const LinkComponent = ({href , styleType, title}) => {
     return (
-            <Link to={href} className={styles[`${style}`]}>{title}</Link>
+            <Link to={href} className={styles[`${styleType}`]}>{title}</Link>
     )
 }
 
