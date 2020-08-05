@@ -18,8 +18,8 @@ const userSchema = new Schema({
         type: String,
         require: true
     },
-    createdPosts: [{ type: ObjectId, ref: "Designs" }],
-    Likes: [{ type: ObjectId, ref: "Designs" }]
+    created: [{ type: ObjectId, ref: "Designs" }],
+    likes: [{ type: ObjectId, ref: "Designs" }]
 });
 
 userSchema.methods = {

@@ -9,13 +9,16 @@ module.exports = {
     },
 
     post: (req, res, next) => {
-        const { title , img , category} = req.body;
+        const {image , category} = req.body;
         const { _id } = req.user;
+        console.log(image)
+        console.log(category)
+        console.log(_id )
 
-        models.Designs.create({  title , img , category, creator: _id })
+        models.Designs.create({ image , category, creator: _id })
             .then((createdDesign) => {
                 return Promise.all([
-                    models.User.updateOne({ _id }, { $push: { createdPosts: createdDesign } }),
+                    models.User.updateOne({ _id }, { $push: { created: createdDesign } }),
                     models.Designs.findOne({ _id: createdDesign._id })
                 ]);
             })
@@ -27,8 +30,8 @@ module.exports = {
 
     put: (req, res, next) => {
         const id = req.params.id;
-        const {  title , img , category } = req.body;
-        models.Designs.updateOne({ _id: id }, { title , img , category  })
+        const { image , category } = req.body;
+        models.Designs.updateOne({ _id: id }, { image , category  })
             .then((updatedDesign) => res.send(updatedDesign))
             .catch(next)
     },

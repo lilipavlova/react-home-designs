@@ -5,11 +5,7 @@ const { String, Number, Boolean, ObjectId } = Schema.Types;
 
 const designsSchema = new Schema({
 
-    title: {
-        type: String,
-        required: true,
-    },
-    img: {
+    image: {
         type: String,
         required: true
     },

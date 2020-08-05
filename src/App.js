@@ -5,7 +5,8 @@ import getCookie from './utils/cookie'
 const App = (props) => {
   const [user, setUser] = useState(null)
   const [loading, setLoading] = useState(true)
-
+ 
+  
   const logIn = (user) => {
     setUser({
       ...user,
