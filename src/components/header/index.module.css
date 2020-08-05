@@ -8,16 +8,36 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     
 }
-link:first-child {
-  float: left;
-}
 
-.ul {
+.ulbox {
     text-align: center;
     font-size: 18px;
     padding: 20px 10px;
     display: inline-block;
     float: right;
+     display: inline-block;
 }
+
+.logoutButton {
+ font-family: Optima, sans-serif;
+ text-decoration: none;
+ background-color: #001a33;
+ border: none;
+ border-radius: 3px;
+ color: #fff;
+ padding: 10px 20px;
+ font-size: 18px;
+ display: inline-block;
+ text-align: center;
+ 
+}
+
+
+
+.logoutButton:hover {
+  background-color: #FFC0CB;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 
 

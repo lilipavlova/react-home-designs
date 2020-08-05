@@ -9,12 +9,13 @@
  font-size: 18px;
  display: inline-block;
  text-align: center;
+ 
 }
 
 
 
 .headerLink:hover {
-  background-color: #e6ac00;
+  background-color: #FFC0CB;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -32,7 +33,7 @@
 }
 
 .navLink:hover {
-  background-color: #e6ac00;
+  background-color: #FFC0CB;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -51,5 +52,5 @@
 }
 
 .headerLinkHome:hover {
-    border-bottom: 2px solid #e6ac00;
+    border-bottom: 2px solid #FFC0CB;
 }

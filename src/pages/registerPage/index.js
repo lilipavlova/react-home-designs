@@ -1,26 +1,41 @@
-import React, { useState } from "react"
+import React, { useState, useContext } from "react"
+import { useHistory } from "react-router-dom"
 import styles from "./index.module.css"
+import authenticate from "../../utils/authenticate"
+import { Link } from "react-router-dom"
+import UserContext from '../../Context'
 
 import PageLayout from "../../components/page-layout"
 import Input from "../../components/input"
 import Title from "../../components/title"
 import SubmitButton from "../../components/button/submitButton"
-import { Link } from "react-router-dom"
+
 
 
 const RegisterPage = () => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [rePassword, setRePassword] = useState("")
+    const context = useContext(UserContext)
+    const history = useHistory()
 
 
 
-   const handleSubmit = (event) => {
-        event.preventDefault()
+   const handleSubmit = async (event) => {
+       event.preventDefault()
+       
+        await authenticate('http://localhost:9999/api/user/register', {
+        email,
+        password
+        }, (user) => {
+        context.logIn(user)
+        history.push('/')
+      }, (e) => {
+        console.log('Error', e)
+      }
+    )
 
-        console.log(email)
-       console.log(password) 
-       console.log(rePassword)
+
     }
 
 

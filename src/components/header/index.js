@@ -1,28 +1,44 @@
-import React, { Component } from 'react'
+import React, { useContext } from 'react'
+import { useHistory } from 'react-router-dom'
+import UserContext from "../../Context"
 import  Link from "../link"
 import styles from './index.module.css'
 
 
 
 
-class Header extends Component {
+const Header = () => {
+  const context = useContext(UserContext)
+  const history = useHistory()
 
-  render() {
+  const isLoggedIn = context.user && context.user.loggedIn
+  
+
+  const logOut = () => {
+    context.logOut()
+    history.push('/')
+  }
+
+ 
+
+
         return (
           <header className={styles.header}>
               <Link href="/" styleType="headerLinkHome" title="Home Designs" />
-            <ul className={styles.ul}>
-              <Link href="/create" styleType="headerLink" title="Create" />
-              <Link href="/ideas" styleType="headerLink" title="Your designs" />
-              <Link href="/likes" styleType="headerLink" title="Liked" />
-              <Link href="/logout" styleType="headerLink" title="Logout"/>
-              <Link href="/login" styleType="headerLink" title="Login" />
-              <Link href="/register" styleType="headerLink" title="Register" />
+            <ul className={styles.ulbox}>
+              {(isLoggedIn ? (<Link href="/create" styleType="headerLink" title="Create" />) : null)}
+              {(isLoggedIn ? (<Link href="/ideas" styleType="headerLink" title="Your designs" />) : null)}
+              {(isLoggedIn ? (<Link href="/likes" styleType="headerLink" title="Liked" />) : null)}
+              {(isLoggedIn ? (<button onClick={logOut} className={styles.logoutButton} >Logout</button>) : null)}
+
+              {(isLoggedIn ? null : (<Link href="/login" styleType="headerLink" title="Login" />) )}
+              {(isLoggedIn ? null : (<Link href="/register" styleType="headerLink" title="Register" />) )}
+                            
             </ul>
           </header>
         
     )
-  }
+
 }
 
 export default Header
