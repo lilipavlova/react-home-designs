@@ -1,0 +1,10 @@
+.designWrapper {
+  /* height: 100%;
+  /* border:1px solid red; */
+  /* width: 33%;
+  margin-top: 20px; */
+   
+  display: flex;
+  flex-flow: row wrap;
+
+}

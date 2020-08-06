@@ -65,7 +65,7 @@ const CreatePage = () => {
 	return (
 		<PageLayout>
 			<form className={styles.container}>
-				<Title title="Create your own design" />
+				<Title title="Upload your own design" />
 				{alert ? <Alert message="All fields are required!" /> : null}
 				<Label htmlFor="image" title="Select image:" />
 				<div className={styles.wrapper}>

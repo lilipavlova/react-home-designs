@@ -2,8 +2,7 @@ const models = require('../models');
 
 module.exports = {
     get: (req, res, next) => {
-      const length = req.query.length ? parseInt(req.query.length) : 20
-        models.Designs.find().limit(length).populate('creator')
+        models.Designs.find().populate('creator')
             .then((designs) => res.send(designs))
             .catch(next);
     },

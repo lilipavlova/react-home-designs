@@ -26,8 +26,8 @@ const Header = () => {
           <header className={styles.header}>
               <Link href="/" styleType="headerLinkHome" title="Home Designs" />
             <ul className={styles.ulbox}>
-              {(isLoggedIn ? (<Link href="/create" styleType="headerLink" title="Create" />) : null)}
-              {(isLoggedIn ? (<Link href="/ideas" styleType="headerLink" title="Your designs" />) : null)}
+              {(isLoggedIn ? (<Link href="/create" styleType="headerLink" title="Add design" />) : null)}
+              {(isLoggedIn ? (<Link href="/yourDesigns" styleType="headerLink" title="Your designs" />) : null)}
               {(isLoggedIn ? (<Link href="/likes" styleType="headerLink" title="Liked" />) : null)}
               {(isLoggedIn ? (<button onClick={logOut} className={styles.logoutButton} >Logout</button>) : null)}
 

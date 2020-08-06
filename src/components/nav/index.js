@@ -9,11 +9,11 @@ class Nav extends Component {
   render() {
         return (
       <nav className={styles.nav}>
-              <Link href="/livingroom" styleType="navLink" title="Living Room" />
-              <Link href="/bedroom" styleType="navLink" title="Bedroom" />
-              <Link href="/Kitchen" styleType="navLink" title="Kitchen" />
-              <Link href="/bathroom" styleType="navLink" title="Bathroom" />
-              <Link href="/garden" styleType="navLink" title="Garden"/>
+              <Link href="/targetDesign/livingRoom" styleType="navLink" title="Living Room" />
+              <Link href="/targetDesign/bedroom" styleType="navLink" title="Bedroom" />
+              <Link href="/targetDesign/kitchen" styleType="navLink" title="Kitchen" />
+              <Link href="/targetDesign/bathroom" styleType="navLink" title="Bathroom" />
+              <Link href="/targetDesign/garden" styleType="navLink" title="Garden"/>
       </nav>
     )
   }
