@@ -3,3 +3,21 @@
   background-color: white;
   margin: 30px 10px;
 }
+
+
+.wrapper {
+  margin: 5px 15px 25px 15px;
+  padding: 5px 40px;
+}
+
+.image {
+  height: 300px;
+  width: auto;
+  margin: 0 100px 40px 100px;
+}
+
+.inputBox {
+    font-family: Optima, sans-serif;
+    color: #001a33;
+    font-size: 15px;
+}

@@ -1,11 +1,26 @@
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  background-color: rgba(0, 0, 0, 0.25);
+.container {
+    border: 2px solid red;
+    border-radius: 3px;
+    width: 30%;
+    margin-bottom: 20px;
+    -webkit-animation: cssAnimation 5s forwards; 
+    animation: cssAnimation 5s forwards;
 }
 
-.modal_content {
-  background-color: white;
-  position: absolute;
+
+@keyframes cssAnimation {
+    0%   {opacity: 1;}
+    90%  {opacity: 1;}
+    100% {opacity: 0;}
+}
+@-webkit-keyframes cssAnimation {
+    0%   {opacity: 1;}
+    90%  {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+.message {
+    padding: 5px 5px;
+    color: red;
+    margin: 5px;
 }
