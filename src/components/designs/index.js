@@ -1,16 +1,15 @@
 import React, { useState , useCallback , useEffect} from "react"
 import styles from "./index.module.css"
-import getDesigns from '../../utils/designs'
+import  getDesigns  from '../../utils/designs'
 
 import Design from "../../components/design"
 
-const Designs = ({ objValue, searchValue , buttonType}) => {
+const Designs = ({ objValue, searchValue }) => {
     const [designs , setDesigns ] = useState([])
 
     const getDesignsByCategory = useCallback(async () => {
         const allDesigns = await getDesigns()
-        console.log(allDesigns)
-
+ 
          if (objValue.includes(".")) {
              const splittedValue = objValue.split(".")
              const [firstValue, secondValue] = splittedValue
@@ -26,7 +25,7 @@ const Designs = ({ objValue, searchValue , buttonType}) => {
     const renderDesigns = () => {
         return designs.map((design) => {
             return (
-                <Design key={design._id} {...design}/>
+                <Design key={design._id} {...design} id={design._id} />
             )
         })
      }

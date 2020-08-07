@@ -1,13 +1,17 @@
-import React, { Component } from 'react'
+import React , { useContext}  from 'react'
 import Link from "../link"
 import styles from './index.module.css'
+import UserContext from "../../Context"
 
+const Nav = () => {
+  const context = useContext(UserContext)
+  const isLoggedIn = context.user && context.user.loggedIn
+  
+  if (!isLoggedIn) {
+    return null
+  }
 
-
-class Nav extends Component {
-
-  render() {
-        return (
+       return (
       <nav className={styles.nav}>
               <Link href="/targetDesign/livingRoom" styleType="navLink" title="Living Room" />
               <Link href="/targetDesign/bedroom" styleType="navLink" title="Bedroom" />
@@ -16,7 +20,7 @@ class Nav extends Component {
               <Link href="/targetDesign/garden" styleType="navLink" title="Garden"/>
       </nav>
     )
-  }
+
 }
 
 export default Nav

@@ -1,5 +1,4 @@
 import React, { useContext } from "react"
-import { useParams } from "react-router-dom"
 import Designs from "../../components/designs"
 import PageLayout from "../../components/page-layout"
 import UserContext from "../../Context"
@@ -12,7 +11,8 @@ const YourDesignsPage = () => {
     
     return (
         <PageLayout>
-            <Title title="Here you can find the designs created by you :)"/>
+            <Title title="Here you can find the designs created by you :)" />
+            <Title title={userEmail} />
            <Designs objValue="creator.email" searchValue={userEmail} />
         </PageLayout>
     )

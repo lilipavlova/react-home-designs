@@ -1,19 +1,19 @@
-.submitButton {
-  background-color: #FFC0CB;
+.deleteButton {
+  background-color: #ff4d4d;
   color: white;
-  padding: 15px 15px;
+  padding: 5px 5px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 100%;
+  width: 33%;
   opacity: 0.9;
-  font-size: 20px;
+  font-size: 15px;
   font-family: Optima, sans-serif;
   font-weight: bold;
   border-radius: 3px;
 }
 
-.submitButton:hover {
+.deleteButton:hover {
   opacity: 1;
   color: #001a33;
 }
