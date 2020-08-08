@@ -1,25 +1,14 @@
 import React, { useState , useCallback , useEffect} from "react"
 import styles from "./index.module.css"
-import  getDesigns  from '../../utils/designs'
-
+import getFilteredDesigns from '../../utils/designs'
 import Design from "../../components/design"
 
 const Designs = ({ objValue, searchValue }) => {
     const [designs , setDesigns ] = useState([])
 
     const getDesignsByCategory = useCallback(async () => {
-        const allDesigns = await getDesigns()
- 
-         if (objValue.includes(".")) {
-             const splittedValue = objValue.split(".")
-             const [firstValue, secondValue] = splittedValue
-             const designs = await allDesigns.filter(obj => obj[`${firstValue}`][`${secondValue}`] === searchValue)
-            setDesigns(designs)
-         } else {
-             const designs = await allDesigns.filter(obj => obj[`${objValue}`] === searchValue)
-             setDesigns(designs)
-         }
-          
+        const filteredDesigns = await getFilteredDesigns(objValue , searchValue )
+        setDesigns(filteredDesigns)    
   })
 
     const renderDesigns = () => {
