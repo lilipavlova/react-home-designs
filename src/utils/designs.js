@@ -1,4 +1,6 @@
-const getFilteredDesigns = async (objValue , searchValue ) => {
+import getCookie from "./cookie"
+
+export const getFilteredDesigns = async (objValue, searchValue) => {
   const promise = await fetch(`http://localhost:9999/api/designs`)
   const designs = await promise.json()
 
@@ -12,5 +14,15 @@ const getFilteredDesigns = async (objValue , searchValue ) => {
 }
 
 
-export default getFilteredDesigns
+export  const handleDelete = async (id) => {
+        	await fetch(`http://localhost:9999/api/designs/${id}`, {
+			        method: 'DELETE',
+			        headers: {
+				'Content-Type': 'application/json',
+				Authorization: getCookie('x-auth-token')
+			}
+		});
+    }
 
+
+    
