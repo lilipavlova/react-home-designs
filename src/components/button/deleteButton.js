@@ -1,6 +1,6 @@
 import React from "react"
 import styles from "./deleteButton.module.css"
-import { useHistory} from 'react-router-dom'
+import { useHistory, Redirect} from 'react-router-dom'
 import getCookie from "../../utils/cookie"
 
 
@@ -16,10 +16,10 @@ const history = useHistory()
 				Authorization: getCookie('x-auth-token')
 			}
 		});
-		history.push('/yourDesigns');
-	}
+		history.push("/yourDesigns")
+    }
     
-
+    
     return (
         <button className={styles.deleteButton} type="submit" onClick={handleDelete}>{title}</button>
     )

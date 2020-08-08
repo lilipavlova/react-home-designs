@@ -11,8 +11,7 @@ const YourDesignsPage = () => {
     
     return (
         <PageLayout>
-            <Title title="Here you can find the designs created by you :)" />
-            <Title title={userEmail} />
+            <Title title={`Here you can find the designs created by you: ${userEmail}`} />
            <Designs objValue="creator.email" searchValue={userEmail} />
         </PageLayout>
     )

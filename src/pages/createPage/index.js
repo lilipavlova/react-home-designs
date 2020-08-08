@@ -24,16 +24,12 @@ const CreatePage = () => {
 		event.preventDefault();
 		const file = event.target.files[0];
 		setUploadedFile(file);
-		let upload = request
-			.post(CLOUDINARY_UPLOAD_URL)
-			.field('upload_preset', CLOUDINARY_UPLOAD_PRESET)
-			.field('file', file);
+		let upload = request.post(CLOUDINARY_UPLOAD_URL).field('upload_preset', CLOUDINARY_UPLOAD_PRESET).field('file', file);
 
 		upload.end((err, response) => {
 			if (err) {
 				console.error(err);
 			}
-
 			if (response.body.secure_url !== '') {
 				setUploadedFileCloudinaryUrl(response.body.secure_url);
 			}
@@ -42,7 +38,6 @@ const CreatePage = () => {
 
 	const handleSubmit = async (event) => {
 		event.preventDefault();
-
 		if (!category || !uploadedFileCloudinaryUrl) {
 			setAlert(true);
 			return;
@@ -59,7 +54,7 @@ const CreatePage = () => {
 				Authorization: getCookie('x-auth-token')
 			}
 		});
-		history.push('/');
+		history.push('/yourDesigns');
 	};
 
 	return (

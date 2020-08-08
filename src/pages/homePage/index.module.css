@@ -1,13 +1,6 @@
-/* .homePage {
- background-image: url(../../homePageBackground.jpg);
- background-color: #cccccc;
- background-position: center;
- background-size: cover;
- background-repeat: no-repeat;
-} */
 
 .homePage {
-    background: url(../../homePageBackground.jpg) ;
+    background: url(https://media.california.com/media/_versions_webp/articles/hero__california_wallpaper__5679x2421___v2560x1091.webp) ;
     background-size: cover;
     background-position: center;
     margin: 0 20px;
@@ -15,9 +8,16 @@
 
 .h2 {
     margin: 0;
-    padding: 100px 0px 300px 100px;
+    padding: 70px 0 20px 100px;
     font-size: 50px;
-    color: white;
-    width: 50%;
+    color: #001a33;
+    width: 60%;
+}
+
+.info {
+    text-decoration: none;
+    color: #001a33;
+    font-size: 30px;
+    padding: 0 0 500px 100px;
 }
 

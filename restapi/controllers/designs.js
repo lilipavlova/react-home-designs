@@ -10,9 +10,6 @@ module.exports = {
     post: (req, res, next) => {
         const {image , category} = req.body;
         const { _id } = req.user;
-        console.log(image)
-        console.log(category)
-        console.log(_id )
 
         models.Designs.create({ image , category, creator: _id })
             .then((createdDesign) => {
@@ -29,9 +26,9 @@ module.exports = {
 
     put: (req, res, next) => {
         const id = req.params.id;
-        const { image , category } = req.body;
-        models.Designs.updateOne({ _id: id }, { image , category  })
-            .then((updatedDesign) => res.send(updatedDesign))
+        const { description } = req.body;
+        models.Origami.updateOne({ _id: id }, { description })
+            .then((updatedOrigami) => res.send(updatedOrigami))
             .catch(next)
     },
 
