@@ -11,7 +11,7 @@ module.exports = {
         const {image , category} = req.body;
         const { _id } = req.user;
 
-        models.Designs.create({ image , category, creator: _id })
+        models.Designs.create({ image , category, creator: _id , likes: []})
             .then((createdDesign) => {
                 return Promise.all([
                     models.User.updateOne({ _id }, { $push: { created: createdDesign } }),
@@ -26,9 +26,11 @@ module.exports = {
 
     put: (req, res, next) => {
         const id = req.params.id;
-        const { description } = req.body;
-        models.Origami.updateOne({ _id: id }, { description })
-            .then((updatedOrigami) => res.send(updatedOrigami))
+        const { _id } = req.user;
+        
+
+        models.Designs.findByIdAndUpdate({ _id: id }, { $push: { likes: _id } })
+            .then((updatedDesign) => res.send(updatedDesign))
             .catch(next)
     },
 

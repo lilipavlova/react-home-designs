@@ -6,7 +6,7 @@ router.get('/', controllers.designs.get);
 
 router.post('/', auth(), controllers.designs.post);
 
-// router.put('/:id', auth(), controllers.designs.put);
+router.put('/:id', auth(), controllers.designs.put);
 
 router.delete('/:id', auth(), controllers.designs.delete);
 

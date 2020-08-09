@@ -16,7 +16,11 @@ const designsSchema = new Schema({
     creator: {
         type: ObjectId,
         ref: "User"
-    }
+    },
+    likes: [{
+        type: ObjectId,
+        ref: "User"
+    }]
 
   });
 
