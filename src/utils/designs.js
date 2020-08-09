@@ -7,7 +7,9 @@ export const getFilteredDesigns = async (objValue, searchValue) => {
   if (objValue.includes(".")) {
     const splittedValue = objValue.split(".")
     const [firstValue, secondValue] = splittedValue
-    return await designs.filter(obj => obj[`${firstValue}`][`${secondValue}`] === searchValue)
+     return await designs.filter(obj => obj[`${firstValue}`][`${secondValue}`] === searchValue)
+  } else if (objValue === "likes") {
+     return await designs.filter(obj => obj[`${objValue}`].includes(searchValue))
   } else {
       return await designs.filter(obj => obj[`${objValue}`] === searchValue)
     }

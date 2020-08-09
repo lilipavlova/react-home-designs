@@ -15,7 +15,8 @@ const App = (props) => {
   }
 
   const logOut = () => {
-    document.cookie = "x-auth-token= ; expires = Thu, 01 Jan 1970 00:00:00 GMT"
+    console.log("haha")
+    document.cookie = "x-auth-token=;expires = Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=localhost;"
     setUser({
       loggedIn: false
     })

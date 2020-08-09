@@ -6,6 +6,7 @@ import LoginPage from "./pages/loginPage"
 import CreatePage from './pages/createPage'
 import TargetDesignPage from './pages/targetDesignPage'
 import YourDesignsPage from "./pages/yourDesignsPage"
+import LikesPage from "./pages/likesPage"
 import ErrorPage from './pages/errorPage'
 
 
@@ -21,6 +22,7 @@ const Navigation = () => {
                 <Route path="/create" component={CreatePage} />
                 <Route path="/targetDesign/:category" component={TargetDesignPage} />
                 <Route path="/yourDesigns" component={YourDesignsPage} />
+                <Route path="/yourLikes" component={LikesPage} />
                 <Route component={ErrorPage} />
             </Switch>
         </BrowserRouter>

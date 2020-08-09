@@ -8,16 +8,12 @@ const Design = (props) => {
     const context = useContext(UserContext)
     const userId = context.user.id
     const isCreator = context.user.email === props.creator.email
-    
     const isLikedAlready = likes.find(e => e === userId)
    
-    
-
     const likeItem = async (id) => {
         await submitLike(id)
         setLikes([...likes , `${userId}`]) 
     }
-
 
     return (
         <div className={styles.card}>
@@ -27,7 +23,7 @@ const Design = (props) => {
             {isCreator ? <button className={styles.deleteButton} onClick={() => props.deleteItem(props.id)}>Delete</button> : null}
             
             {!isCreator && !isLikedAlready ? <button className={styles.likeButton} onClick={() => likeItem(props.id)}>Like</button> : null}
-            {!isCreator && isLikedAlready? <p className={styles.alreadyLiked} >You already liked this one :) </p>  : null}
+            {!isCreator && isLikedAlready? <p className={styles.alreadyLiked} >Already liked</p>  : null}
         </div>
     )
 }
