@@ -4,9 +4,6 @@ import './index.css';
 import Navigation from './navigation';
 import App from './App'
 
-
-
-
 ReactDOM.render(
   <React.StrictMode>
     <App>

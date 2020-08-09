@@ -16,11 +16,11 @@
 }
 
 .p {
-    padding: 5px
+    padding: 5px;
 }
 
 .deleteButton {
-  background-color: #ff4d4d;
+  background-color: #ff8080;
   color: white;
   padding: 5px 5px;
   margin: 8px 0;
@@ -62,7 +62,7 @@
 
 .alreadyLiked {
   background-color: #FFC0CB;;
-  color: white;
+  color: #001a33;
   padding: 5px 5px;
   margin: 8px 0;
   border: none;

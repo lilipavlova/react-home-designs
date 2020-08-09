@@ -8,7 +8,6 @@ const LikesPage = () => {
     const context = useContext(UserContext)
     const userId = context.user.id
     const userEmail = context.user.email
-    console.log(context.user)
      
     return (
         <PageLayout>

@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react"
+import React, { useContext, useState } from "react"
 import styles from "./index.module.css"
 import UserContext from "../../Context"
 import { submitLike } from "../../utils/designs"

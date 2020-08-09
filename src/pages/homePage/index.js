@@ -15,9 +15,9 @@ const HomePage = () => {
           <h2 className={styles.h2}> Get and share design inspiration for your dream home!</h2>
           {isLoggedIn ? (<p className={styles.info} />) : (
            <p className={styles.info}>
-            <Link href="/login" title="Login" styleType="navLink" /> /
+            <Link href="/login" title="Login" styleType="navLink" /> 	&nbsp;
             <Link href="/register" title="Register" styleType="navLink"/>
-            to lear more...
+            	&nbsp; to explore...
           </p>
           )}
         </div>

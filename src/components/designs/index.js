@@ -7,8 +7,10 @@ const Designs = ({ objValue, searchValue }) => {
     const [designs, setDesigns] = useState([])
 
     const getDesignsByCategory = useCallback(async () => {
-        const filteredDesigns = await getFilteredDesigns(objValue , searchValue )
-        setDesigns(filteredDesigns)    
+        const filteredDesigns = await getFilteredDesigns(objValue, searchValue)
+        const sortedDesigns = filteredDesigns.sort((a ,b) => b.likes.length - a.likes.length)
+    
+        setDesigns(sortedDesigns)    
     })
     
     const deleteItem = async (id) => {
@@ -17,7 +19,6 @@ const Designs = ({ objValue, searchValue }) => {
         setDesigns(newData) 
     }
     
-
     const renderDesigns = () => {
         return designs.map((design) => {
             return (
@@ -28,7 +29,7 @@ const Designs = ({ objValue, searchValue }) => {
     
       useEffect(() => {
       getDesignsByCategory()
-      }, [objValue, searchValue])
+      }, [objValue, searchValue ])
 
     return (
         <div className={styles.designWrapper}>

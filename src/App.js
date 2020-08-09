@@ -6,7 +6,6 @@ const App = (props) => {
   const [user, setUser] = useState(null)
   const [loading, setLoading] = useState(true)
  
-  
   const logIn = (user) => {
     setUser({
       ...user,
@@ -15,7 +14,6 @@ const App = (props) => {
   }
 
   const logOut = () => {
-    console.log("haha")
     document.cookie = "x-auth-token=;expires = Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=localhost;"
     setUser({
       loggedIn: false
