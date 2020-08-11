@@ -9,12 +9,12 @@ Inspired by Pinterest and Instagram
 - Back-end: Node.js, Express, Mongoose
 
 - Install dependencies:
-folder project-design: npm install
-folder restapi: npm install
+   - folder project-design: npm install
+   - folder restapi: npm install
 
 - How to start it?
-folder project-design: npm start / localhost:3000
-folder restapi: npm run start / localhost:9999
+   - folder project-design: npm start / localhost:3000
+   - folder restapi: npm run start / localhost:9999
 
 
 
