@@ -16,16 +16,25 @@ const RegisterPage = () => {
 	const [ password, setPassword ] = useState('');
 	const [ rePassword, setRePassword ] = useState('');
 	const [ alertFields, setAlertFields ] = useState(false);
-	const [ alertPasswords, setAlertPasswords ] = useState(false);
+	const [alertPasswords, setAlertPasswords] = useState(false);
+	const [alertPasswordLength, setAlertPasswordLength] = useState(false)
 	const context = useContext(UserContext);
 	const history = useHistory();
 
 	const handleSubmit = async (event) => {
 		event.preventDefault();
 
-		if (!email || !password || !rePassword) {
+		if (!email || !password || !rePassword ) {
 			setAlertFields(true);
 			return;
+		}
+
+		console.log(password.length)
+
+		if (password.length <= 5) {
+			console.log(password.length)
+			setAlertPasswordLength(true)
+			return
 		}
 
 		if (password !== rePassword) {
@@ -55,6 +64,7 @@ const RegisterPage = () => {
 				<Title title="Registration form" />
 				{alertFields ? <Alert message="All fields are required!" /> : null}
 				{alertPasswords ? <Alert message="Passwords do not match!" /> : null}
+				{alertPasswordLength ? <Alert message="Password must be at least 6 characters long!" /> : null}
 				<Input type="email" value={email} label="Email" id="email" onChange={(e) => setEmail(e.target.value)} />
 				<Input
 					type="password"
