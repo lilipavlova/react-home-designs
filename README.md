@@ -5,8 +5,13 @@ Inspired by Pinterest and Instagram
 - Public part: Login/Register and the main idea of the website
 - Private part: After succesful Login/Register you can create designs, uploading photos via Cloudenary and explore all the desings per category. You have a separate tab for your own designs with delete functionality. And separate tab for the designs you liked already. All designes are ordered accorindg the most liked ones.
 
-- Front-end: ReactJs
-- Back-end: Node.js, Express, Mongoose
+- Front-end:
+   - ReactJs
+- Back-end: 
+   - Node.js
+   - Express
+   - Mongoose
+   - Database: MongoDB hosted on Atlas
 
 - Install dependencies:
    - folder project-design: npm install
