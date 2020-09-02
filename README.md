@@ -1,9 +1,9 @@
--  Project idea: The project is about sharing ideas about interior designs. 
-You can share your own designs and like the the others shares'.
+-  Project idea: The project is about sharing interior designs ideas. 
+You can share your own designs and like the others shares'.
 Inspired by Pinterest and Instagram
 
 - Public part: Login/Register and the main idea of the website
-- Private part: After succesful Login/Register you can create designs, uploading photos via Cloudenary and explore all the desings per category. You have a separate tab for your own designs with delete functionality. And separate tab for the designs you liked already. All designes are ordered accorindg the most liked ones.
+- Private part: After succesful Login/Register you can create designs, via uploading photos through Cloudenary and explore all the avaialable desings per category. You have a separate tab for your own designs together with a delete functionality. And separate tab for the designs you liked already. All designes are ordered accorindg the most liked ones.
 
 - Front-end:
    - ReactJs
