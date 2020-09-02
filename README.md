@@ -1,3 +1,5 @@
+- Softuni React exam defence
+
 -  Project idea: The project is about sharing interior designs ideas. 
 You can share your own designs and like the others shares'.
 Inspired by Pinterest and Instagram
